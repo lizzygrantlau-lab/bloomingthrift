@@ -187,7 +187,13 @@ section{padding:clamp(58px,8vw,112px) 5vw}
   .hero-copy{width:100%;margin:0;background:transparent!important}
   .ticker,.magazine,.moodboard,.report,.drops,.buy{padding-left:18px;padding-right:18px}
 }
-.hero{background-image:url('assets/web/hero-full.jpg')}
+.hero{
+  background-color:#dfc7a7;
+  background-image:linear-gradient(rgba(196,112,54,.18),rgba(213,145,78,.18)),url('assets/web/hero-full.jpg');
+  background-size:cover,80% auto;
+  background-position:center,center;
+  background-repeat:no-repeat,no-repeat;
+}
 .hero-copy::before{background-image:url('assets/web/brand-elements.jpg')}
 </style>
 <script>
