@@ -163,7 +163,7 @@ section{padding:clamp(58px,8vw,112px) 5vw}
   background-position:center;
   background-repeat:no-repeat;
 }
-.hero-copy{width:min(48vw,660px);max-width:none;margin:0;align-self:center;transform:translateX(20%);padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+.hero-copy{width:min(48vw,660px);max-width:none;margin:0;align-self:center;transform:translateX(20vw);padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
 .hero-copy h1,.hero-copy p,.hero-copy .mono{text-shadow:0 1px 12px rgba(238,232,216,.92),0 1px 2px rgba(238,232,216,.96)}
 .hero-posts{width:100%;max-width:none;justify-self:stretch;padding:0;background:transparent;border:0;box-shadow:none}
 .hero-posts{position:relative;width:100%!important;max-width:none!important;height:calc(100vh - 58px);min-height:620px;margin:0!important;padding:0!important;overflow:hidden;align-self:stretch}
@@ -179,12 +179,12 @@ section{padding:clamp(58px,8vw,112px) 5vw}
 }
 @media(max-width:900px){
   .hero{padding:28px}
-  .hero-copy{width:min(100%,680px);margin:0;transform:none}
+  .hero-copy{width:min(calc(100% - 20vw),680px);margin:0;transform:translateX(20vw)}
   .hero-posts{width:100%!important;height:75vh;min-height:520px;justify-self:stretch}
 }
 @media(max-width:600px){
   .hero{padding:18px;background-position:58% center}
-  .hero-copy{width:100%;margin:0;background:transparent!important}
+  .hero-copy{width:calc(100% - 20vw);margin:0;transform:translateX(20vw);background:transparent!important}
   .ticker,.magazine,.moodboard,.report,.drops,.buy{padding-left:18px;padding-right:18px}
 }
 .hero{
