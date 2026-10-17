@@ -151,6 +151,31 @@ section{padding:clamp(58px,8vw,112px) 5vw}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 /* Lightweight media layer: photographs use optimized local JPEGs. */
+.hero{
+  width:100%;
+  max-width:none;
+  padding-left:clamp(28px,4vw,72px);
+  padding-right:clamp(28px,4vw,72px);
+  grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);
+  gap:clamp(28px,4vw,80px);
+}
+.hero-copy{width:100%;max-width:none}
+.hero-posts{width:100%;max-width:none;justify-self:stretch}
+.hero-posts .posts-exported img.active{width:100%;max-height:calc(100vh - 190px);object-fit:contain}
+.ticker{padding-left:clamp(28px,4vw,72px);padding-right:clamp(28px,4vw,72px)}
+.magazine,.moodboard,.report,.drops,.buy{padding-left:clamp(28px,4vw,72px);padding-right:clamp(28px,4vw,72px)}
+.magazine-page,.report-card,.buy-box{max-width:none;width:100%}
+.moodboard>.mood-exported{width:100%}
+@media(max-width:1100px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(340px,.85fr)}
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-left:28px;padding-right:28px}
+  .hero-posts{width:min(100%,720px);justify-self:center}
+}
+@media(max-width:600px){
+  .hero,.ticker,.magazine,.moodboard,.report,.drops,.buy{padding-left:18px;padding-right:18px}
+}
 .hero{background-image:linear-gradient(rgba(238,232,216,.78),rgba(238,232,216,.78)),url('assets/web/wall-collage.jpg')}
 .hero-copy::before{background-image:url('assets/web/brand-elements.jpg')}
 </style>
