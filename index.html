@@ -154,14 +154,15 @@ section{padding:clamp(58px,8vw,112px) 5vw}
 .hero{
   width:100%;
   max-width:none;
-  padding-left:clamp(28px,4vw,72px);
-  padding-right:clamp(28px,4vw,72px);
+  min-height:calc(100vh - 58px);
+  padding:0;
   grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);
-  gap:clamp(28px,4vw,80px);
+  gap:0;
+  align-items:stretch;
 }
-.hero-copy{width:100%;max-width:none}
+.hero-copy{width:auto;max-width:none;margin:clamp(28px,4vw,72px);align-self:center}
 .hero-posts{width:100%;max-width:none;justify-self:stretch;padding:0;background:transparent;border:0;box-shadow:none}
-.hero-posts{position:relative;width:100%!important;max-width:none!important;height:clamp(620px,calc(100vh - 58px),980px);margin:0!important;padding:0!important;overflow:hidden}
+.hero-posts{position:relative;width:100%!important;max-width:none!important;height:calc(100vh - 58px);min-height:620px;margin:0!important;padding:0!important;overflow:hidden;align-self:stretch}
 .hero-posts img.active{display:block!important;width:100%!important;max-width:none!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center;background:transparent}
 .hero-posts .canva-label{position:absolute;left:18px;bottom:16px;color:var(--paper);text-shadow:0 1px 3px var(--ink);z-index:2}
 .hero-posts .carousel-controls{position:absolute;right:18px;bottom:12px;z-index:2}
@@ -173,11 +174,14 @@ section{padding:clamp(58px,8vw,112px) 5vw}
   .hero{grid-template-columns:minmax(0,1fr) minmax(340px,.85fr)}
 }
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;padding-left:28px;padding-right:28px}
-  .hero-posts{width:min(100%,720px);justify-self:center}
+  .hero{grid-template-columns:1fr;padding:0}
+  .hero-copy{margin:28px}
+  .hero-posts{width:100%!important;height:75vh;min-height:520px;justify-self:stretch}
 }
 @media(max-width:600px){
-  .hero,.ticker,.magazine,.moodboard,.report,.drops,.buy{padding-left:18px;padding-right:18px}
+  .hero{padding:0}
+  .hero-copy{margin:18px}
+  .ticker,.magazine,.moodboard,.report,.drops,.buy{padding-left:18px;padding-right:18px}
 }
 .hero{background-image:linear-gradient(rgba(238,232,216,.78),rgba(238,232,216,.78)),url('assets/web/wall-collage.jpg')}
 .hero-copy::before{background-image:url('assets/web/brand-elements.jpg')}
