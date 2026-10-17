@@ -155,12 +155,15 @@ section{padding:clamp(58px,8vw,112px) 5vw}
   width:100%;
   max-width:none;
   min-height:calc(100vh - 58px);
-  padding:0;
-  grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);
-  gap:0;
-  align-items:stretch;
+  padding:clamp(28px,5vw,80px);
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
-.hero-copy{width:auto;max-width:none;margin:clamp(28px,4vw,72px);align-self:center}
+.hero-copy{width:min(48vw,660px);max-width:none;margin:0;align-self:center;background:rgba(238,232,216,.93)}
 .hero-posts{width:100%;max-width:none;justify-self:stretch;padding:0;background:transparent;border:0;box-shadow:none}
 .hero-posts{position:relative;width:100%!important;max-width:none!important;height:calc(100vh - 58px);min-height:620px;margin:0!important;padding:0!important;overflow:hidden;align-self:stretch}
 .hero-posts img.active{display:block!important;width:100%!important;max-width:none!important;height:100%!important;max-height:none!important;object-fit:cover!important;object-position:center;background:transparent}
@@ -174,16 +177,16 @@ section{padding:clamp(58px,8vw,112px) 5vw}
   .hero{grid-template-columns:minmax(0,1fr) minmax(340px,.85fr)}
 }
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr;padding:0}
-  .hero-copy{margin:28px}
+  .hero{padding:28px}
+  .hero-copy{width:min(100%,680px);margin:0}
   .hero-posts{width:100%!important;height:75vh;min-height:520px;justify-self:stretch}
 }
 @media(max-width:600px){
-  .hero{padding:0}
-  .hero-copy{margin:18px}
+  .hero{padding:18px;background-position:58% center}
+  .hero-copy{width:100%;margin:0;background:rgba(238,232,216,.9)}
   .ticker,.magazine,.moodboard,.report,.drops,.buy{padding-left:18px;padding-right:18px}
 }
-.hero{background-image:linear-gradient(rgba(238,232,216,.78),rgba(238,232,216,.78)),url('assets/web/wall-collage.jpg')}
+.hero{background-image:url('assets/web/hero-full.jpg')}
 .hero-copy::before{background-image:url('assets/web/brand-elements.jpg')}
 </style>
 <script>
@@ -223,11 +226,12 @@ window.addEventListener('DOMContentLoaded',()=>document.querySelectorAll('img').
 <section class="report" id="reportagem"><div class="report-card"><div class="mono">reportagem / 001 · estilo e rebeldia</div><img src="assets/vivienne-westwood.png" alt="Vivienne Westwood jovem, usando camiseta do Sex Pistols"><h2>Vivienne<br>Westwood</h2><p>Vivienne Isabel Swire nasceu em 8 de abril de 1941, em Tintwistle, na região de Derbyshire, Inglaterra, e morreu em 29 de dezembro de 2022, em Londres, aos 81 anos. Ao lado de Malcolm McLaren, abriu a loja SEX, na King's Road, espaço que ajudou a formar a linguagem visual do punk. As roupas criadas por Westwood foram usadas pelos Sex Pistols e contribuíram para construir a identidade provocadora da banda. A partir dessa experiência, ela desenvolveu uma carreira própria, transformando alfaiataria, tartan, corseteria, história e ativismo em uma das linguagens mais influentes da moda contemporânea.</p><div class="recommendation-grid"><div class="recommendation"><div class="recommendation-copy"><strong>Recomendação de série: <em>Pistol</em> (2022).</strong>A minissérie acompanha a história dos Sex Pistols a partir da trajetória de Steve Jones. Criada por Craig Pearce e dirigida por Danny Boyle, a produção original é da FX Productions.<br><br><a href="https://www.fxnetworks.com/shows/pistol" target="_blank" rel="noreferrer">ver a série no site oficial da FX ↗</a></div><img class="recommendation-cover" src="assets/pistol-cover.png" alt="Capa da série Pistol, da FX"></div><div class="recommendation"><div class="recommendation-copy"><strong>Recomendação de filme: <em>Moonage Daydream</em> (2022).</strong>Um documentário sobre David Bowie que atravessa o glam rock, a música, a arte e suas muitas reinvenções visuais. Dirigido por Brett Morgen, é uma escolha que conversa diretamente com a identidade da Blooming Thrift.<br><br><a href="https://mubi.com/pt/br/films/moonage-daydream" target="_blank" rel="noreferrer">assistir no MUBI ↗</a></div><img class="recommendation-cover" src="https://images.mubicdn.net/images/film/339432/cache-1140784-1782378315/image-w1280.jpg?size=700x" alt="Capa oficial de Moonage Daydream, filme sobre David Bowie"></div></div></div><div class="letterboxd-note"><div class="mono">para continuar a pesquisa</div><p><strong>Letterboxd</strong> é um aplicativo para registrar os filmes que você viu, montar listas e descobrir novas referências. Depois de assistir, procure <em>Moonage Daydream</em> por lá e salve suas impressões.</p><a href="https://letterboxd.com/" target="_blank" rel="noreferrer">abrir Letterboxd ↗</a></div><div class="archive-piece"><img src="assets/sex-london-store.png" alt="Fachada da loja SEX em Londres"><div class="archive-piece-copy"><div class="mono">arquivo de moda · londres</div><h3>A primeira loja: SEX</h3><p>Na King’s Road, em Londres, Vivienne Westwood e Malcolm McLaren abriram a SEX — uma loja que virou ponto de encontro da estética e da atitude punk.</p></div></div><div class="archive-gallery"><figure><img src="assets/sex-piece-01.png" alt="Peça de roupa da estética punk da SEX"><figcaption>Peça do arquivo</figcaption></figure><figure><img src="assets/sex-piece-02.png" alt="Jaqueta customizada com referências punk"><figcaption>Jaqueta customizada</figcaption></figure><figure><img src="assets/sex-piece-03.png" alt="Peça têxtil com tipografia e intervenção punk"><figcaption>Intervenção têxtil</figcaption></figure><figure><img src="assets/sex-piece-04.png" alt="Camiseta com referência aos Sex Pistols"><figcaption>Referência Sex Pistols</figcaption></figure></div></div></section>
 <section class="buy" id="comprar"><div class="buy-box"><div class="mono">informações importantes · conteúdo oficial do Instagram</div><h2>Como comprar?</h2><p class="buy-lead">Tudo o que você precisa saber para garantir uma peça, montar sua sacolinha e receber seu pacote.</p><div class="info-grid"><article class="info-card"><img src="assets/web/drop-pink.jpg" alt="Sacolinha Blooming"><button type="button">Sacolinha Blooming +</button><div class="info-copy"><p>As peças são pagas no momento em que entram na sacolinha, garantindo que fiquem reservadas para você.</p><p>A sacolinha fica disponível por até 60 dias. Para retirar, é só nos mandar uma mensagem.</p><p>Se o prazo terminar sem aviso, as peças voltam a ficar disponíveis e os valores pagos não poderão ser reembolsados.</p></div></article><article class="info-card"><img src="assets/web/drop-white.jpg" alt="Envio e retirada"><button type="button">Envio e retirada +</button><div class="info-copy"><p>Envios para todo o Brasil via Correios. Consulte o frete para a sua região.</p><p>Retiradas e Uber Flash disponíveis para a região do Vale dos Sinos. Consulte pontos e valores.</p></div></article><article class="info-card"><img src="assets/web/instagram-caption.jpg" alt="Como comprar"><button type="button">Como comprar +</button><div class="info-copy"><p>Os lançamentos acontecem em formato de drops periódicos no Instagram.</p><p>Comente “QUERO” no post ou chame na DM. O tempo de tolerância é de 20 minutos; depois, passamos para o próximo da fila.</p><p>Quem chegar primeiro, leva!</p></div></article></div><div class="info-note">clique nos cards para abrir as informações · conteúdo oficial do Instagram · <a href="https://www.instagram.com/blooming.thrift/" target="_blank" rel="noreferrer">ver perfil ↗</a></div></div></section>
 </main><footer class="footer"><div><h2>blooming thrift.</h2><p>Moda alternativa, consumo consciente e uma revista de bolso.</p></div><a href="https://www.instagram.com/blooming.thrift/" target="_blank">@blooming.thrift ↗</a><div class="mono">keep fashion weird</div></footer>
-<script>document.querySelectorAll(".info-card button").forEach(b=>b.addEventListener("click",()=>b.parentElement.classList.toggle("open")));const carousel=document.querySelector(".posts-exported");if(carousel){const imgs=[...carousel.querySelectorAll("img")];let current=0;imgs[0]?.classList.add("active");const controls=document.createElement("div");controls.className="carousel-controls";controls.innerHTML="<button type=button aria-label=Anterior>←</button><span class=carousel-count>1 / "+imgs.length+"</span><button type=button aria-label=Próximo>→</button>";carousel.appendChild(controls);const count=controls.querySelector(".carousel-count");const show=()=>{imgs.forEach((img,i)=>img.classList.toggle("active",i===current));count.textContent=(current+1)+" / "+imgs.length};controls.firstElementChild.onclick=()=>{current=(current+imgs.length-1)%imgs.length;show()};controls.lastElementChild.onclick=()=>{current=(current+1)%imgs.length;show()}}const hero=document.querySelector(".hero"), heroPosts=document.querySelector(".magazine-page.posts-exported"); if(hero && heroPosts){heroPosts.classList.add("hero-posts");hero.appendChild(heroPosts);document.querySelector(".magazine")?.classList.add("posts-moved");}</script>
+<script>document.querySelectorAll(".info-card button").forEach(b=>b.addEventListener("click",()=>b.parentElement.classList.toggle("open")));const carousel=document.querySelector(".posts-exported");if(carousel){const imgs=[...carousel.querySelectorAll("img")];let current=0;imgs[0]?.classList.add("active");const controls=document.createElement("div");controls.className="carousel-controls";controls.innerHTML="<button type=button aria-label=Anterior>←</button><span class=carousel-count>1 / "+imgs.length+"</span><button type=button aria-label=Próximo>→</button>";carousel.appendChild(controls);const count=controls.querySelector(".carousel-count");const show=()=>{imgs.forEach((img,i)=>img.classList.toggle("active",i===current));count.textContent=(current+1)+" / "+imgs.length};controls.firstElementChild.onclick=()=>{current=(current+imgs.length-1)%imgs.length;show()};controls.lastElementChild.onclick=()=>{current=(current+1)%imgs.length;show()}}</script>
 <script>
 const localCardImages={'Sacolinha Blooming':'assets/web/drop-pink.jpg','Envio e retirada':'assets/web/drop-white.jpg','Como comprar':'assets/web/instagram-caption.jpg'};
 document.querySelectorAll('.info-card img[alt]').forEach(img=>{const local=localCardImages[img.alt];if(local){img.src=local;img.removeAttribute('srcset')}});
 </script></body></html>
+
 
 
 
